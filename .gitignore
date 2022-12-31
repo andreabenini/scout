@@ -4,6 +4,8 @@
 # Visual Studio Code
 .vscode/
 
-# TmpWork directories
+# Tmp directories and scripts
 tmp/
 mnt/
+ssh*
+
