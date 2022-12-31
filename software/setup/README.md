@@ -6,6 +6,7 @@ These packages are needed for barebone software setup, everything else will
 be installed as a dependency
 - git
 - gcc
+- rsync
 - i2c-tools  
     I2C Devices
 - python
@@ -33,7 +34,8 @@ i2c-dev
 
 
 ## Python Virtual Enviornment
-Needed packages, create a virtual environment and install these packages there:
+These packages are needed, create a virtual environment and install them all in this order.
+There's no need to execute everything in a privileged environment, normal user is preferred.
 - wheel
 - adafruit-circuitpython-ssd1306  
     I2C oled display
