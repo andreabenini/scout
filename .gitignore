@@ -4,8 +4,10 @@
 # Visual Studio Code
 .vscode/
 
-# Tmp directories and scripts
+# Tmp directories, scripts
 tmp/
 mnt/
 ssh*
 
+# Avoid working files or named pipes
+software/infoDisplay/messages.pipe
