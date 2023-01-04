@@ -1,0 +1,12 @@
+# Display status information on service display
+
+[Unit]
+Description=Show IP address after network connection
+After=infodisplay.service
+After=sshd.service
+
+[Service]
+ExecStart=/bin/sh -c 'sleep 10; echo status > /opt/infodisplay/messages.pipe'
+
+[Install]
+WantedBy=multi-user.target

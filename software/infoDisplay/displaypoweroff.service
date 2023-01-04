@@ -1,0 +1,17 @@
+# Display poweroff message on service display
+[Unit]
+Description=Display poweroff message on service display
+DefaultDependencies=no
+Before=halt.target shutdown.target reboot.target
+
+[Service]
+User=scout
+Group=scout
+Type=oneshot
+WorkingDirectory=/opt/infodisplay
+Environment=PATH=/opt/scout.python.env/bin:$PATH
+ExecStart=/opt/infodisplay/infoDisplay.py --poweroff
+RemainAfterExit=yes
+
+[Install]
+WantedBy=halt.target shutdown.target reboot.target
