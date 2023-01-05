@@ -1,4 +1,5 @@
-# Service display manager
+# /etc/systemd/system/infodisplay.service
+# I2C info display service daemon
 
 [Unit]
 Description=Info Display Service Daemon
@@ -9,9 +10,9 @@ Description=Info Display Service Daemon
 Type=simple
 User=scout
 Group=scout
-WorkingDirectory=/opt/infodisplay
+WorkingDirectory=/opt/scout/infodisplay
 Environment=PATH=/opt/scout.python.env/bin:$PATH
-ExecStart=/opt/infodisplay/infoDisplay.py
+ExecStart=/opt/scout/infodisplay/infoDisplay.py
 Restart=on-failure
 RestartSec=30s
 

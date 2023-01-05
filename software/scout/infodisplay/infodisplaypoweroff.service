@@ -1,3 +1,4 @@
+# /etc/systemd/system/displaypoweroff.service
 # Display poweroff message on service display
 [Unit]
 Description=Display poweroff message on service display
@@ -8,9 +9,9 @@ Before=halt.target shutdown.target reboot.target
 User=scout
 Group=scout
 Type=oneshot
-WorkingDirectory=/opt/infodisplay
+WorkingDirectory=/opt/scout/infodisplay
 Environment=PATH=/opt/scout.python.env/bin:$PATH
-ExecStart=/opt/infodisplay/infoDisplay.py --poweroff
+ExecStart=/opt/scout/infodisplay/infoDisplay.py --poweroff
 RemainAfterExit=yes
 
 [Install]
