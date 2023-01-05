@@ -11,4 +11,4 @@ ssh*
 tmp*
 
 # Avoid working files or named pipes
-software/infoDisplay/messages.pipe
+messages.pipe
