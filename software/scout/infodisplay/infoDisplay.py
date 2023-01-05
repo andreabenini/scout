@@ -146,6 +146,7 @@ try:
     screen = display(128, 64)
     if options.poweroff:
         screen.poweroff()
+        time.sleep(1)
         sys.exit(0)
     pipe = namedpipe()
     screen.loading()
