@@ -1,0 +1,19 @@
+# Service display manager
+
+[Unit]
+Description=Info Display Service Daemon
+# Before=multi-user.target
+# Before=sysinit.target
+
+[Service]
+Type=simple
+User=scout
+Group=scout
+WorkingDirectory=/opt/infodisplay
+Environment=PATH=/opt/scout.python.env/bin:$PATH
+ExecStart=/opt/infodisplay/infoDisplay.py
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=sysinit.target
