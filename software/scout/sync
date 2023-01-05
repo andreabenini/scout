@@ -1,0 +1,45 @@
+#!/bin/bash
+# Description
+#         Keep in sync local repository with rover root
+# Author  Andrea Benini
+# Date    2022/12/31
+# License GNU GPLv3 Only
+#
+
+# Configuration section
+
+# rsync parameters
+PARAMS="\
+        --verbose --recursive --compress --perms --owner --group \
+        --specials --stats --devices --links --times --hard-links --delete \
+"
+RSYNC=`which rsync 2>/dev/null`
+SOURCE=.
+DEST=../../mnt/scout/
+
+# Business logic
+if [ "$RSYNC" == "" ]; then
+    echo -e "\nERROR: 'rsync' utility not found, aborting clone\n\n"
+    exit 1
+fi
+case "$1" in
+    fromDevice)           # Sync back from remote to local
+        TMP=$SOURCE
+        SOURCE=$DEST
+        DEST=$TMP
+        ;;
+    fromComputer)
+        ;;
+    *)
+        echo -e "\nUsage: $0 <optionName>\n"
+        echo -e "    fromComputer   Sync:  Computer -> Device"
+        echo -e "    fromDevice     Sync:  Device   -> Computer\n"
+        echo -e "Aborting script\n"
+        exit 1
+        ;;
+esac
+echo -e "\nSYNC          >  [$1]"
+echo -e   "Source        >  $SOURCE"
+echo -e   "Destination   >  $DEST"
+echo -e "--------------------------------------------\n"
+$RSYNC $PARAMS "$SOURCE" "$DEST"
