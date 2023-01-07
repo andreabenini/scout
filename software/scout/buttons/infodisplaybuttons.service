@@ -1,0 +1,19 @@
+# /etc/systemd/system/infodisplaybuttons.service
+# Service keyboard manager
+
+[Unit]
+Description=Info Display Buttons Service Daemon
+After=infodisplay.service
+After=sshd.service
+Before=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/scout/buttons
+Environment=PATH=/opt/scout.python.env/bin:$PATH
+ExecStart=/opt/scout/buttons/buttons.py -S 5 -D /opt/scout/infodisplay/messages.pipe
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
