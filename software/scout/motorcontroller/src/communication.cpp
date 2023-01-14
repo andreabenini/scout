@@ -1,6 +1,4 @@
 #include "communication.h"
-extern void serialEvent();
-extern void serialClear();
 
 
 void serialClear() {

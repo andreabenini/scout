@@ -7,6 +7,11 @@
 #include "common.h"
 
 
+// External includes
+extern void serialEvent();
+extern void serialClear();
+
+// Local functions
 void serialClear();
 void serialConnect();
 void serialGetCommand();
