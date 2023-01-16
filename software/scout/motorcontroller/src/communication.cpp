@@ -32,7 +32,7 @@ void serialConnect() {
     // Serial communication init
     serialClear();
     delay(500);
-    Serial.begin(9600);                 // This pipes to the serial monitor
+    Serial.begin(9600);                       // This pipes to the serial monitor
     delay(500);
     Serial.println(FPrint("Type 'connect' to start"));
     Serial.flush();

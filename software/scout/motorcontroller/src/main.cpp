@@ -1,5 +1,6 @@
 // Libraries defines
 #include <Arduino.h>
+#include <Adafruit_PWMServoDriver.h>
 
 // Global variables
 byte iCommand;
@@ -11,6 +12,12 @@ char Command[50];
 #include "common.h"
 #include "motor.h"
 #include "communication.h"
+
+
+/**
+ * Global variables
+ */
+Adafruit_PWMServoDriver pwm;
 
 
 /**

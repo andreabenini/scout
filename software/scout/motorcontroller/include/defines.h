@@ -9,9 +9,12 @@ extern byte iCommand;
 extern char BUFFER[200];
 extern char Command[50];
 
+
 // Program information
 #define MAIN_LOOP_DELAY     500
 #define INFO_VERSION        PSTR("scout controller v1.0")
+#define MOTOR_NUMBER        6
+
 
 // Commands
 #define FPrint(s)           (__FlashStringHelper*)PSTR(s)
