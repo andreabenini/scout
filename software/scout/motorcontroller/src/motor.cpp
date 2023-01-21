@@ -83,6 +83,7 @@ void motorAction(byte motorNumber, byte direction, byte dutyCycle) {
      *   @param  invert If true, inverts the output, defaults to 'false'
      */
     // pwm.setPin(motorNumber-1, 4096*dutyCycle/100, direction==0? true: false);    // FIXME: Use this one with the 0..100% scale
+    // DEBUG: PWM debug with direct commands to PWMServoDriver
     pwm.setPin(motorNumber-1, dutyCycle, direction==0? true: false);
     
     // pwm.setPWM(motorNumber, 0, (i + (4096/16)*motorNumber) % 4096 );
