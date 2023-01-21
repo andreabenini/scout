@@ -77,6 +77,7 @@ void motorAction(byte motorNumber, byte direction, byte dutyCycle) {
     Serial.print(") -> ");
     Serial.println(dutyCycle);
     // DEBUG: End
+
     /*
      *   @param  num One of the PWM output pins, from 0 to 15
      *   @param  val The number of ticks out of 4096 to be active, should be a value from 0 to 4095 inclusive.
