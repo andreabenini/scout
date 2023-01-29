@@ -1,0 +1,42 @@
+--- Terminal on /dev/ttyACM0 | 9600 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+
+--- pySerial (3.5) - miniterm - help
+---
+--- Ctrl+C   Exit program (alias Ctrl+T Q)
+--- Ctrl+T   Menu escape key, followed by:
+--- Menu keys:
+---    Ctrl+T  Send the menu character itself to remote
+---    Ctrl+C  Send the exit character itself to remote
+---    Ctrl+I  Show info
+---    Ctrl+U  Upload file (prompt will be shown)
+---    Ctrl+A  encoding
+---    Ctrl+F  edit filters
+--- Toggles:
+---    Ctrl+R  RTS   Ctrl+D  DTR   Ctrl+B  BREAK
+---    Ctrl+E  echo  Ctrl+L  EOL
+---
+--- Port settings (Ctrl+T followed by the following):
+---    p          change port
+---    7 8        set data bits
+---    N E O S M  change parity (None, Even, Odd, Space, Mark)
+---    1 2 3      set stop bits (1, 2, 1.5)
+---    b          change baud rate
+---    x X        disable/enable software flow control
+---    r R        disable/enable hardware flow control
+
+--- Settings: /dev/ttyACM0  9600,8,N,1
+--- RTS: active    DTR: active    BREAK: inactive
+--- CTS: active    DSR: inactive  RI: inactive  CD: inactive
+--- software flow control: inactive
+--- hardware flow control: inactive
+--- serial input encoding: UTF-8
+--- serial output encoding: UTF-8
+--- EOL: CRLF
+--- filters: default
+
+--- Enter new encoding name [UTF-8]: 
+--- serial input encoding: UTF-8
+--- serial output encoding: UTF-8

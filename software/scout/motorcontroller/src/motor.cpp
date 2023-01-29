@@ -51,7 +51,7 @@ void motorCommand(char *command) {
             direction = 0;
         }
         token = strtok(NULL, delimiter);    // Duty Cycle
-        dutyCycle = atoi(token);
+        dutyCycle = atol(token);
         // if (dutyCycle > 100) {           // FIXME: Temporarily removing duty cycle controls
         //     dutyCycle = 100;
         // }
@@ -68,13 +68,13 @@ void motorCommand(char *command) {
 } /**/
 
 
-void motorAction(byte motorNumber, byte direction, byte dutyCycle) {
+void motorAction(byte motorNumber, byte direction, unsigned int dutyCycle) {        // FIXME: Take [dutyCycle] back to byte
     // DEBUG:
     Serial.print("Motor: ");
     Serial.print(motorNumber);
-    Serial.print(" (");
+    Serial.print("   Direction (");
     Serial.print(direction);
-    Serial.print(") -> ");
+    Serial.print(") ->    DutyCycle ");
     Serial.println(dutyCycle);
     // DEBUG: End
 

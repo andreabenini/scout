@@ -13,7 +13,7 @@ extern Adafruit_PWMServoDriver pwm;
 // Local functions
 void motorInit();
 void motorCommand(char *command);
-void motorAction(byte motorNumber, byte direction, byte dutyCycle);
+void motorAction(byte motorNumber, byte direction, unsigned int dutyCycle);
 
 
 #endif
